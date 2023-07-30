@@ -8,7 +8,7 @@ def start_game(game_board):
     print("Three in a row means you win")
     print("The top left corner is 0,0: so comment your 'row,collum' on your turn to make a move.")
     display(game_board)
-    output = input("Would you like to go first? Y/N")
+    output = input("Would you like to go first? Y/N ")
     if output == 'Y':
         player_turn(game_board)
     if output == 'y':
@@ -34,7 +34,7 @@ def won_game(gb):
             if gb[i][1] == 'X':
                 if gb[i][2] == 'X':
                     print('Great Job! You won the game!')
-                    output = input("Would you like to play again? Y/N")
+                    output = input("Would you like to play again? Y/N ")
                     if output == 'Y':
                         start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                     if output == 'y':
@@ -45,7 +45,7 @@ def won_game(gb):
             if gb[1][i] == 'X':
                 if gb[2][i] == 'X':
                     print('Great Job! You won the game!')
-                    output = input("Would you like to play again? Y/N")
+                    output = input("Would you like to play again? Y/N ")
                     if output == 'Y':
                         start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                     if output == 'y':
@@ -56,7 +56,7 @@ def won_game(gb):
             if gb[i][1] == 'O':
                 if gb[i][2] == 'O':
                     print('You lost this one, good luck next time!')
-                    output = input("Would you like to play again? Y/N")
+                    output = input("Would you like to play again? Y/N ")
                     if output == 'Y':
                         start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                     if output == 'y':
@@ -67,7 +67,7 @@ def won_game(gb):
             if gb[1][i] == 'O':
                 if gb[2][i] == 'O':
                     print('You lost this one, good luck next time!')
-                    output = input("Would you like to play again? Y/N")
+                    output = input("Would you like to play again? Y/N ")
                     if output == 'Y':
                         start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                     if output == 'y':
@@ -77,7 +77,7 @@ def won_game(gb):
         if gb[1][1] == 'X':
             if gb[2][2] == 'X':
                 print('Great Job! You won the game!')
-                output = input("Would you like to play again? Y/N")
+                output = input("Would you like to play again? Y/N ")
                 if output == 'Y':
                     start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                 if output == 'y':
@@ -87,7 +87,7 @@ def won_game(gb):
         if gb[1][1] == 'O':
             if gb[2][2] == 'O':
                 print('You lost this one, good luck next time!')
-                output = input("Would you like to play again? Y/N")
+                output = input("Would you like to play again? Y/N ")
                 if output == 'Y':
                     start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                 if output == 'y':
@@ -97,7 +97,7 @@ def won_game(gb):
         if gb[1][1] == 'X':
             if gb[2][0] == 'X':
                 print('Great Job! You won the game!')
-                output = input("Would you like to play again? Y/N")
+                output = input("Would you like to play again? Y/N ")
                 if output == 'Y':
                     start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                 if output == 'y':
@@ -107,7 +107,7 @@ def won_game(gb):
         if gb[1][1] == 'O':
             if gb[2][0] == 'O':
                 print('You lost this one, good luck next time!')
-                output = input("Would you like to play again? Y/N")
+                output = input("Would you like to play again? Y/N ")
                 if output == 'Y':
                     start_game([['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']])
                 if output == 'y':
@@ -120,7 +120,7 @@ def tie_game(gb):
             if gb[i][u] == '.':
                 return
     print("Tie Game. Not bad!")
-    output = input("Would you like to play again? Y/N")
+    output = input("Would you like to play again? Y/N ")
     if output == 'Y':
         start_game([['.','.','.'], ['.','.','.'], ['.','.','.']])
     if output == 'y':
@@ -147,7 +147,7 @@ def invalid(output):
     return True
 
 def player_turn(game_board):
-    output = input("Where would you like to go?")
+    output = input("Where would you like to go? ")
     if invalid(output) is False:
         display(game_board)
         player_turn(game_board)
